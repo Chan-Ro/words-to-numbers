@@ -120,6 +120,7 @@ export const TOKEN_TYPE = {
   MAGNITUDE: 2,
   DECIMAL: 3,
   HUNDRED: 4,
+  POINT: 5
 };
 
 export const ALL_WORDS = [ ...NUMBER_WORDS, ...JOINERS, ...DECIMALS ];

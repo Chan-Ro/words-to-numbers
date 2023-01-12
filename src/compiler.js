@@ -17,6 +17,7 @@ const getNumber = region => {
       return;
     }
     switch (type) {
+      case TOKEN_TYPE.POINT:
       case TOKEN_TYPE.MAGNITUDE:
       case TOKEN_TYPE.HUNDRED: {
         subRegionSum = 1;

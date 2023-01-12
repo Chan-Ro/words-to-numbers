@@ -1,14 +1,15 @@
-import clj_fuzzy from 'clj-fuzzy';
+import jaro from 'talisman/metrics/jaro';
 import itsSet from 'its-set';
 
 import { ALL_WORDS } from './constants';
 
 export default (word, haystack) => {
-  return (haystack || ALL_WORDS)
+  const result = (haystack || ALL_WORDS)
     .map(numberWord => ({
       word: numberWord,
-      score: clj_fuzzy.metrics.jaro(numberWord, word)
+      score: jaro(numberWord, word)
     }))
     .reduce((acc, stat) => !itsSet(acc.score) || stat.score > acc.score ? stat : acc, {})
     .word;
+  return result;
 };
