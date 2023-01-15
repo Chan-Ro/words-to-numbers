@@ -85,8 +85,8 @@ it('test one two three test', () => {
   expect(wtn('test one two three test')).to.equal('test 1 2 3 test');
 });
 
-it('won huntred', () => {
-  expect(wtn('won huntred', {fuzzy: true})).to.equal(100);
+it('one huntred', () => {
+  expect(wtn('one huntred', {fuzzy: true})).to.equal(100);
 });
 
 it('tu thousant and faav', () => {
